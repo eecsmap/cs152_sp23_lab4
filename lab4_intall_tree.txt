@@ -1,0 +1,1861 @@
+total 36
+drwxr-xr-x.  9 cs152 cs152 4096 Apr  1  2021 .
+drwxr-xr-x. 13 cs152 cs152 4096 Apr 15  2021 ..
+drwxr-xr-x.  2 cs152 cs152 4096 Apr  8  2021 bin
+drwxr-xr-x.  5 cs152 cs152 4096 Apr  1  2021 include
+drwxr-xr-x.  4 cs152 cs152 4096 Apr  8  2021 lib
+drwxr-xr-x.  2 cs152 cs152 4096 Apr  1  2021 lib64
+drwxr-xr-x.  3 cs152 cs152 4096 Mar 31  2021 libexec
+drwxr-xr-x.  5 cs152 cs152 4096 Mar 31  2021 riscv64-unknown-elf
+drwxr-xr-x.  7 cs152 cs152 4096 Apr  1  2021 share
+
+/home/ff/cs152/sp21/lab4-install
+├── bin
+│   ├── elf2hex
+│   ├── riscv64-unknown-elf-addr2line
+│   ├── riscv64-unknown-elf-ar
+│   ├── riscv64-unknown-elf-as
+│   ├── riscv64-unknown-elf-c++
+│   ├── riscv64-unknown-elf-c++filt
+│   ├── riscv64-unknown-elf-cpp
+│   ├── riscv64-unknown-elf-elfedit
+│   ├── riscv64-unknown-elf-g++
+│   ├── riscv64-unknown-elf-gcc
+│   ├── riscv64-unknown-elf-gcc-10.1.0
+│   ├── riscv64-unknown-elf-gcc-ar
+│   ├── riscv64-unknown-elf-gcc-nm
+│   ├── riscv64-unknown-elf-gcc-ranlib
+│   ├── riscv64-unknown-elf-gcov
+│   ├── riscv64-unknown-elf-gcov-dump
+│   ├── riscv64-unknown-elf-gcov-tool
+│   ├── riscv64-unknown-elf-gdb
+│   ├── riscv64-unknown-elf-gdb-add-index
+│   ├── riscv64-unknown-elf-gprof
+│   ├── riscv64-unknown-elf-ld
+│   ├── riscv64-unknown-elf-ld.bfd
+│   ├── riscv64-unknown-elf-lto-dump
+│   ├── riscv64-unknown-elf-nm
+│   ├── riscv64-unknown-elf-objcopy
+│   ├── riscv64-unknown-elf-objdump
+│   ├── riscv64-unknown-elf-ranlib
+│   ├── riscv64-unknown-elf-readelf
+│   ├── riscv64-unknown-elf-run
+│   ├── riscv64-unknown-elf-size
+│   ├── riscv64-unknown-elf-strings
+│   ├── riscv64-unknown-elf-strip
+│   ├── spike
+│   ├── spike-dasm
+│   ├── spike-log-parser
+│   ├── termios-xspike
+│   └── xspike
+├── include
+│   ├── fesvr
+│   │   ├── byteorder.h
+│   │   ├── config.h
+│   │   ├── context.h
+│   │   ├── device.h
+│   │   ├── dtm.h
+│   │   ├── elf.h
+│   │   ├── elfloader.h
+│   │   ├── htif.h
+│   │   ├── htif_hexwriter.h
+│   │   ├── htif_pthread.h
+│   │   ├── memif.h
+│   │   ├── option_parser.h
+│   │   ├── rfb.h
+│   │   ├── syscall.h
+│   │   ├── term.h
+│   │   └── tsi.h
+│   ├── gdb
+│   │   └── jit-reader.h
+│   └── riscv
+│       └── mmio_plugin.h
+├── lib
+│   ├── gcc
+│   │   └── riscv64-unknown-elf
+│   │       └── 10.1.0
+│   │           ├── crtbegin.o
+│   │           ├── crtend.o
+│   │           ├── crti.o
+│   │           ├── crtn.o
+│   │           ├── include
+│   │           │   ├── float.h
+│   │           │   ├── gcov.h
+│   │           │   ├── iso646.h
+│   │           │   ├── riscv_vector.h
+│   │           │   ├── riscv_vector_itr.h
+│   │           │   ├── stdalign.h
+│   │           │   ├── stdarg.h
+│   │           │   ├── stdatomic.h
+│   │           │   ├── stdbool.h
+│   │           │   ├── stddef.h
+│   │           │   ├── stdfix.h
+│   │           │   ├── stdint-gcc.h
+│   │           │   ├── stdint.h
+│   │           │   ├── stdnoreturn.h
+│   │           │   ├── tgmath.h
+│   │           │   ├── unwind.h
+│   │           │   └── varargs.h
+│   │           ├── include-fixed
+│   │           │   ├── limits.h
+│   │           │   ├── README
+│   │           │   └── syslimits.h
+│   │           ├── install-tools
+│   │           │   ├── fixinc_list
+│   │           │   ├── gsyslimits.h
+│   │           │   ├── include
+│   │           │   │   ├── limits.h
+│   │           │   │   └── README
+│   │           │   ├── macro_list
+│   │           │   └── mkheaders.conf
+│   │           ├── libgcc.a
+│   │           ├── libgcov.a
+│   │           └── plugin
+│   │               ├── gtype.state
+│   │               ├── include
+│   │               │   ├── ada
+│   │               │   │   └── gcc-interface
+│   │               │   │       └── ada-tree.def
+│   │               │   ├── addresses.h
+│   │               │   ├── alias.h
+│   │               │   ├── align.h
+│   │               │   ├── alloc-pool.h
+│   │               │   ├── all-tree.def
+│   │               │   ├── ansidecl.h
+│   │               │   ├── array-traits.h
+│   │               │   ├── asan.h
+│   │               │   ├── attribs.h
+│   │               │   ├── auto-host.h
+│   │               │   ├── auto-profile.h
+│   │               │   ├── backend.h
+│   │               │   ├── basic-block.h
+│   │               │   ├── bb-reorder.h
+│   │               │   ├── b-header-vars
+│   │               │   ├── bitmap.h
+│   │               │   ├── brig-builtins.def
+│   │               │   ├── builtin-attrs.def
+│   │               │   ├── builtins.def
+│   │               │   ├── builtins.h
+│   │               │   ├── builtin-types.def
+│   │               │   ├── bversion.h
+│   │               │   ├── calls.h
+│   │               │   ├── ccmp.h
+│   │               │   ├── c-family
+│   │               │   │   ├── c-common.def
+│   │               │   │   ├── c-common.h
+│   │               │   │   ├── c-objc.h
+│   │               │   │   ├── c-pragma.h
+│   │               │   │   └── c-pretty-print.h
+│   │               │   ├── cfganal.h
+│   │               │   ├── cfgbuild.h
+│   │               │   ├── cfgcleanup.h
+│   │               │   ├── cfgexpand.h
+│   │               │   ├── cfg-flags.def
+│   │               │   ├── cfg.h
+│   │               │   ├── cfghooks.h
+│   │               │   ├── cfgloop.h
+│   │               │   ├── cfgloopmanip.h
+│   │               │   ├── cfgrtl.h
+│   │               │   ├── cgraph.h
+│   │               │   ├── cif-code.def
+│   │               │   ├── collect2-aix.h
+│   │               │   ├── collect2.h
+│   │               │   ├── collect-utils.h
+│   │               │   ├── color-macros.h
+│   │               │   ├── conditions.h
+│   │               │   ├── config
+│   │               │   │   ├── elfos.h
+│   │               │   │   ├── initfini-array.h
+│   │               │   │   ├── newlib-stdint.h
+│   │               │   │   └── riscv
+│   │               │   │       ├── elf.h
+│   │               │   │       ├── riscv.h
+│   │               │   │       ├── riscv-opts.h
+│   │               │   │       └── riscv-protos.h
+│   │               │   ├── configargs.h
+│   │               │   ├── config.h
+│   │               │   ├── context.h
+│   │               │   ├── convert.h
+│   │               │   ├── coretypes.h
+│   │               │   ├── coroutine-builtins.def
+│   │               │   ├── coverage.h
+│   │               │   ├── cp
+│   │               │   │   ├── cp-tree.def
+│   │               │   │   ├── cp-tree.h
+│   │               │   │   ├── cxx-pretty-print.h
+│   │               │   │   ├── name-lookup.h
+│   │               │   │   ├── operators.def
+│   │               │   │   └── type-utils.h
+│   │               │   ├── cppbuiltin.h
+│   │               │   ├── cppdefault.h
+│   │               │   ├── cpplib.h
+│   │               │   ├── cselib.h
+│   │               │   ├── c-tree.h
+│   │               │   ├── d
+│   │               │   │   └── d-tree.def
+│   │               │   ├── data-streamer.h
+│   │               │   ├── dbgcnt.def
+│   │               │   ├── dbgcnt.h
+│   │               │   ├── dbxout.h
+│   │               │   ├── dce.h
+│   │               │   ├── ddg.h
+│   │               │   ├── debug.h
+│   │               │   ├── defaults.h
+│   │               │   ├── df.h
+│   │               │   ├── dfp.h
+│   │               │   ├── diagnostic-color.h
+│   │               │   ├── diagnostic-core.h
+│   │               │   ├── diagnostic.def
+│   │               │   ├── diagnostic-event-id.h
+│   │               │   ├── diagnostic.h
+│   │               │   ├── diagnostic-metadata.h
+│   │               │   ├── diagnostic-path.h
+│   │               │   ├── diagnostic-url.h
+│   │               │   ├── digraph.h
+│   │               │   ├── dojump.h
+│   │               │   ├── dominance.h
+│   │               │   ├── domwalk.h
+│   │               │   ├── double-int.h
+│   │               │   ├── dump-context.h
+│   │               │   ├── dumpfile.h
+│   │               │   ├── dwarf2asm.h
+│   │               │   ├── dwarf2out.h
+│   │               │   ├── edit-context.h
+│   │               │   ├── emit-rtl.h
+│   │               │   ├── errors.h
+│   │               │   ├── escaped_string.h
+│   │               │   ├── et-forest.h
+│   │               │   ├── except.h
+│   │               │   ├── explow.h
+│   │               │   ├── expmed.h
+│   │               │   ├── expr.h
+│   │               │   ├── fibonacci_heap.h
+│   │               │   ├── file-find.h
+│   │               │   ├── filenames.h
+│   │               │   ├── file-prefix-map.h
+│   │               │   ├── fixed-value.h
+│   │               │   ├── flags.h
+│   │               │   ├── flag-types.h
+│   │               │   ├── fold-const-call.h
+│   │               │   ├── fold-const.h
+│   │               │   ├── function-abi.h
+│   │               │   ├── function.h
+│   │               │   ├── gcc.h
+│   │               │   ├── gcc-plugin.h
+│   │               │   ├── gcc-rich-location.h
+│   │               │   ├── gcc-symtab.h
+│   │               │   ├── gcov-counter.def
+│   │               │   ├── gcov-io.h
+│   │               │   ├── gcse-common.h
+│   │               │   ├── gcse.h
+│   │               │   ├── generic-match.h
+│   │               │   ├── gengtype.h
+│   │               │   ├── genrtl.h
+│   │               │   ├── gensupport.h
+│   │               │   ├── ggc.h
+│   │               │   ├── ggc-internal.h
+│   │               │   ├── gimple-builder.h
+│   │               │   ├── gimple.def
+│   │               │   ├── gimple-expr.h
+│   │               │   ├── gimple-fold.h
+│   │               │   ├── gimple.h
+│   │               │   ├── gimple-iterator.h
+│   │               │   ├── gimple-low.h
+│   │               │   ├── gimple-match.h
+│   │               │   ├── gimple-predict.h
+│   │               │   ├── gimple-pretty-print.h
+│   │               │   ├── gimple-ssa-evrp-analyze.h
+│   │               │   ├── gimple-ssa.h
+│   │               │   ├── gimple-ssa-warn-restrict.h
+│   │               │   ├── gimple-streamer.h
+│   │               │   ├── gimple-walk.h
+│   │               │   ├── gimplify.h
+│   │               │   ├── gimplify-me.h
+│   │               │   ├── glimits.h
+│   │               │   ├── graphds.h
+│   │               │   ├── graph.h
+│   │               │   ├── graphite.h
+│   │               │   ├── graphviz.h
+│   │               │   ├── gsstruct.def
+│   │               │   ├── gstab.h
+│   │               │   ├── gsyms.h
+│   │               │   ├── gsyslimits.h
+│   │               │   ├── gtm-builtins.def
+│   │               │   ├── gtype-desc.h
+│   │               │   ├── hard-reg-set.h
+│   │               │   ├── hash-map.h
+│   │               │   ├── hash-map-traits.h
+│   │               │   ├── hash-set.h
+│   │               │   ├── hashtab.h
+│   │               │   ├── hash-table.h
+│   │               │   ├── hash-traits.h
+│   │               │   ├── highlev-plugin-common.h
+│   │               │   ├── hooks.h
+│   │               │   ├── hosthooks-def.h
+│   │               │   ├── hosthooks.h
+│   │               │   ├── hsa-brig-format.h
+│   │               │   ├── hsa-builtins.def
+│   │               │   ├── hsa-common.h
+│   │               │   ├── hw-doloop.h
+│   │               │   ├── hwint.h
+│   │               │   ├── ifcvt.h
+│   │               │   ├── inchash.h
+│   │               │   ├── incpath.h
+│   │               │   ├── input.h
+│   │               │   ├── insn-addr.h
+│   │               │   ├── insn-attr-common.h
+│   │               │   ├── insn-attr.h
+│   │               │   ├── insn-codes.h
+│   │               │   ├── insn-constants.h
+│   │               │   ├── insn-flags.h
+│   │               │   ├── insn-modes.h
+│   │               │   ├── insn-modes-inline.h
+│   │               │   ├── insn-notes.def
+│   │               │   ├── internal-fn.def
+│   │               │   ├── internal-fn.h
+│   │               │   ├── intl.h
+│   │               │   ├── int-vector-builder.h
+│   │               │   ├── ipa-fnsummary.h
+│   │               │   ├── ipa-icf-gimple.h
+│   │               │   ├── ipa-icf.h
+│   │               │   ├── ipa-inline.h
+│   │               │   ├── ipa-param-manipulation.h
+│   │               │   ├── ipa-predicate.h
+│   │               │   ├── ipa-prop.h
+│   │               │   ├── ipa-reference.h
+│   │               │   ├── ipa-ref.h
+│   │               │   ├── ipa-utils.h
+│   │               │   ├── ira.h
+│   │               │   ├── ira-int.h
+│   │               │   ├── is-a.h
+│   │               │   ├── json.h
+│   │               │   ├── langhooks-def.h
+│   │               │   ├── langhooks.h
+│   │               │   ├── lcm.h
+│   │               │   ├── libfuncs.h
+│   │               │   ├── libiberty.h
+│   │               │   ├── limitx.h
+│   │               │   ├── limity.h
+│   │               │   ├── line-map.h
+│   │               │   ├── loop-unroll.h
+│   │               │   ├── lower-subreg.h
+│   │               │   ├── lra.h
+│   │               │   ├── lra-int.h
+│   │               │   ├── lto-compress.h
+│   │               │   ├── lto-section-names.h
+│   │               │   ├── lto-streamer.h
+│   │               │   ├── machmode.def
+│   │               │   ├── machmode.h
+│   │               │   ├── md5.h
+│   │               │   ├── memmodel.h
+│   │               │   ├── memory-block.h
+│   │               │   ├── mem-stats.h
+│   │               │   ├── mem-stats-traits.h
+│   │               │   ├── mode-classes.def
+│   │               │   ├── objc
+│   │               │   │   └── objc-tree.def
+│   │               │   ├── obstack.h
+│   │               │   ├── omp-builtins.def
+│   │               │   ├── omp-expand.h
+│   │               │   ├── omp-general.h
+│   │               │   ├── omp-grid.h
+│   │               │   ├── omp-low.h
+│   │               │   ├── omp-offload.h
+│   │               │   ├── omp-simd-clone.h
+│   │               │   ├── optabs.def
+│   │               │   ├── optabs.h
+│   │               │   ├── optabs-libfuncs.h
+│   │               │   ├── optabs-query.h
+│   │               │   ├── optabs-tree.h
+│   │               │   ├── optinfo-emit-json.h
+│   │               │   ├── optinfo.h
+│   │               │   ├── options.h
+│   │               │   ├── opt-problem.h
+│   │               │   ├── opts-diagnostic.h
+│   │               │   ├── opts.h
+│   │               │   ├── opt-suggestions.h
+│   │               │   ├── ordered-hash-map.h
+│   │               │   ├── output.h
+│   │               │   ├── passes.def
+│   │               │   ├── pass-instances.def
+│   │               │   ├── pass_manager.h
+│   │               │   ├── plugin-api.h
+│   │               │   ├── plugin.def
+│   │               │   ├── plugin.h
+│   │               │   ├── plugin-version.h
+│   │               │   ├── poly-int.h
+│   │               │   ├── poly-int-types.h
+│   │               │   ├── predict.def
+│   │               │   ├── predict.h
+│   │               │   ├── prefix.h
+│   │               │   ├── pretty-print.h
+│   │               │   ├── print-rtl.h
+│   │               │   ├── print-tree.h
+│   │               │   ├── profile-count.h
+│   │               │   ├── profile.h
+│   │               │   ├── range.h
+│   │               │   ├── range-op.h
+│   │               │   ├── read-md.h
+│   │               │   ├── read-rtl-function.h
+│   │               │   ├── real.h
+│   │               │   ├── realmpfr.h
+│   │               │   ├── recog.h
+│   │               │   ├── regcprop.h
+│   │               │   ├── reg-notes.def
+│   │               │   ├── regrename.h
+│   │               │   ├── regset.h
+│   │               │   ├── regs.h
+│   │               │   ├── reload.h
+│   │               │   ├── resource.h
+│   │               │   ├── rtl.def
+│   │               │   ├── rtl-error.h
+│   │               │   ├── rtl.h
+│   │               │   ├── rtlhash.h
+│   │               │   ├── rtlhooks-def.h
+│   │               │   ├── rtl-iter.h
+│   │               │   ├── rtx-vector-builder.h
+│   │               │   ├── run-rtl-passes.h
+│   │               │   ├── safe-ctype.h
+│   │               │   ├── sanitizer.def
+│   │               │   ├── sbitmap.h
+│   │               │   ├── sched-int.h
+│   │               │   ├── selftest-diagnostic.h
+│   │               │   ├── selftest.h
+│   │               │   ├── selftest-rtl.h
+│   │               │   ├── sel-sched-dump.h
+│   │               │   ├── sel-sched.h
+│   │               │   ├── sel-sched-ir.h
+│   │               │   ├── sese.h
+│   │               │   ├── shortest-paths.h
+│   │               │   ├── shrink-wrap.h
+│   │               │   ├── signop.h
+│   │               │   ├── sparseset.h
+│   │               │   ├── spellcheck.h
+│   │               │   ├── spellcheck-tree.h
+│   │               │   ├── splay-tree.h
+│   │               │   ├── sreal.h
+│   │               │   ├── ssa.h
+│   │               │   ├── ssa-iterators.h
+│   │               │   ├── stab.def
+│   │               │   ├── statistics.h
+│   │               │   ├── stmt.h
+│   │               │   ├── stor-layout.h
+│   │               │   ├── streamer-hooks.h
+│   │               │   ├── stringpool.h
+│   │               │   ├── substring-locations.h
+│   │               │   ├── symbol-summary.h
+│   │               │   ├── symtab.h
+│   │               │   ├── sync-builtins.def
+│   │               │   ├── system.h
+│   │               │   ├── target.def
+│   │               │   ├── target-def.h
+│   │               │   ├── target-globals.h
+│   │               │   ├── target.h
+│   │               │   ├── target-hooks-macros.h
+│   │               │   ├── target-insns.def
+│   │               │   ├── targhooks.h
+│   │               │   ├── timevar.def
+│   │               │   ├── timevar.h
+│   │               │   ├── tm.h
+│   │               │   ├── tm_p.h
+│   │               │   ├── tm-preds.h
+│   │               │   ├── toplev.h
+│   │               │   ├── tracer.h
+│   │               │   ├── trans-mem.h
+│   │               │   ├── tree-affine.h
+│   │               │   ├── tree-cfgcleanup.h
+│   │               │   ├── tree-cfg.h
+│   │               │   ├── tree-check.h
+│   │               │   ├── tree-chrec.h
+│   │               │   ├── tree-core.h
+│   │               │   ├── tree-data-ref.h
+│   │               │   ├── tree.def
+│   │               │   ├── tree-dfa.h
+│   │               │   ├── tree-diagnostic.h
+│   │               │   ├── tree-dump.h
+│   │               │   ├── tree-eh.h
+│   │               │   ├── tree.h
+│   │               │   ├── tree-hasher.h
+│   │               │   ├── tree-hash-traits.h
+│   │               │   ├── tree-if-conv.h
+│   │               │   ├── tree-inline.h
+│   │               │   ├── tree-into-ssa.h
+│   │               │   ├── tree-iterator.h
+│   │               │   ├── tree-nested.h
+│   │               │   ├── tree-object-size.h
+│   │               │   ├── tree-outof-ssa.h
+│   │               │   ├── tree-parloops.h
+│   │               │   ├── tree-pass.h
+│   │               │   ├── tree-phinodes.h
+│   │               │   ├── tree-pretty-print.h
+│   │               │   ├── tree-scalar-evolution.h
+│   │               │   ├── tree-sra.h
+│   │               │   ├── tree-ssa-address.h
+│   │               │   ├── tree-ssa-alias.h
+│   │               │   ├── tree-ssa-ccp.h
+│   │               │   ├── tree-ssa-coalesce.h
+│   │               │   ├── tree-ssa-dce.h
+│   │               │   ├── tree-ssa-dom.h
+│   │               │   ├── tree-ssa-dse.h
+│   │               │   ├── tree-ssa.h
+│   │               │   ├── tree-ssa-live.h
+│   │               │   ├── tree-ssa-loop.h
+│   │               │   ├── tree-ssa-loop-ivopts.h
+│   │               │   ├── tree-ssa-loop-manip.h
+│   │               │   ├── tree-ssa-loop-niter.h
+│   │               │   ├── tree-ssanames.h
+│   │               │   ├── tree-ssa-operands.h
+│   │               │   ├── tree-ssa-propagate.h
+│   │               │   ├── tree-ssa-sccvn.h
+│   │               │   ├── tree-ssa-scopedtables.h
+│   │               │   ├── tree-ssa-strlen.h
+│   │               │   ├── tree-ssa-ter.h
+│   │               │   ├── tree-ssa-threadedge.h
+│   │               │   ├── tree-ssa-threadupdate.h
+│   │               │   ├── tree-stdarg.h
+│   │               │   ├── tree-streamer.h
+│   │               │   ├── treestruct.def
+│   │               │   ├── tree-switch-conversion.h
+│   │               │   ├── tree-vector-builder.h
+│   │               │   ├── tree-vectorizer.h
+│   │               │   ├── tree-vrp.h
+│   │               │   ├── tristate.h
+│   │               │   ├── tsan.h
+│   │               │   ├── tsystem.h
+│   │               │   ├── typeclass.h
+│   │               │   ├── typed-splay-tree.h
+│   │               │   ├── ubsan.h
+│   │               │   ├── valtrack.h
+│   │               │   ├── value-prof.h
+│   │               │   ├── value-range.h
+│   │               │   ├── varasm.h
+│   │               │   ├── vec.h
+│   │               │   ├── vec-perm-indices.h
+│   │               │   ├── vector-builder.h
+│   │               │   ├── version.h
+│   │               │   ├── vmsdbg.h
+│   │               │   ├── vr-values.h
+│   │               │   ├── vtable-verify.h
+│   │               │   ├── wide-int-bitmask.h
+│   │               │   ├── wide-int.h
+│   │               │   ├── wide-int-print.h
+│   │               │   ├── xcoff.h
+│   │               │   └── xcoffout.h
+│   │               ├── libcc1plugin.la
+│   │               ├── libcc1plugin.so -> libcc1plugin.so.0.0.0
+│   │               ├── libcc1plugin.so.0 -> libcc1plugin.so.0.0.0
+│   │               ├── libcc1plugin.so.0.0.0
+│   │               ├── libcp1plugin.la
+│   │               ├── libcp1plugin.so -> libcp1plugin.so.0.0.0
+│   │               ├── libcp1plugin.so.0 -> libcp1plugin.so.0.0.0
+│   │               └── libcp1plugin.so.0.0.0
+│   ├── libcustomext.so
+│   ├── libdisasm.a
+│   ├── libfesvr.a
+│   ├── libriscv64-unknown-elf-sim.a
+│   ├── libsoftfloat.so
+│   └── pkgconfig
+│       ├── riscv-disasm.pc
+│       └── riscv-fesvr.pc
+├── lib64
+│   ├── libcc1.la
+│   ├── libcc1.so -> libcc1.so.0.0.0
+│   ├── libcc1.so.0 -> libcc1.so.0.0.0
+│   └── libcc1.so.0.0.0
+├── libexec
+│   └── gcc
+│       └── riscv64-unknown-elf
+│           └── 10.1.0
+│               ├── cc1
+│               ├── cc1plus
+│               ├── collect2
+│               ├── install-tools
+│               │   ├── fixincl
+│               │   ├── fixinc.sh
+│               │   ├── mkheaders
+│               │   └── mkinstalldirs
+│               ├── liblto_plugin.la
+│               ├── liblto_plugin.so -> liblto_plugin.so.0.0.0
+│               ├── liblto_plugin.so.0 -> liblto_plugin.so.0.0.0
+│               ├── liblto_plugin.so.0.0.0
+│               ├── lto1
+│               ├── lto-wrapper
+│               └── plugin
+│                   └── gengtype
+├── riscv64-unknown-elf
+│   ├── bin
+│   │   ├── ar
+│   │   ├── as
+│   │   ├── ld
+│   │   ├── ld.bfd
+│   │   ├── nm
+│   │   ├── objcopy
+│   │   ├── objdump
+│   │   ├── ranlib
+│   │   ├── readelf
+│   │   └── strip
+│   ├── include
+│   │   ├── alloca.h
+│   │   ├── _ansi.h
+│   │   ├── argz.h
+│   │   ├── ar.h
+│   │   ├── assert.h
+│   │   ├── bits
+│   │   ├── c++
+│   │   │   └── 10.1.0
+│   │   │       ├── algorithm
+│   │   │       ├── any
+│   │   │       ├── array
+│   │   │       ├── atomic
+│   │   │       ├── backward
+│   │   │       │   ├── auto_ptr.h
+│   │   │       │   ├── backward_warning.h
+│   │   │       │   ├── binders.h
+│   │   │       │   ├── hash_fun.h
+│   │   │       │   ├── hash_map
+│   │   │       │   ├── hash_set
+│   │   │       │   ├── hashtable.h
+│   │   │       │   └── strstream
+│   │   │       ├── bit
+│   │   │       ├── bits
+│   │   │       │   ├── algorithmfwd.h
+│   │   │       │   ├── allocated_ptr.h
+│   │   │       │   ├── allocator.h
+│   │   │       │   ├── alloc_traits.h
+│   │   │       │   ├── atomic_base.h
+│   │   │       │   ├── atomic_futex.h
+│   │   │       │   ├── atomic_lockfree_defines.h
+│   │   │       │   ├── basic_ios.h
+│   │   │       │   ├── basic_ios.tcc
+│   │   │       │   ├── basic_string.h
+│   │   │       │   ├── basic_string.tcc
+│   │   │       │   ├── boost_concept_check.h
+│   │   │       │   ├── c++0x_warning.h
+│   │   │       │   ├── charconv.h
+│   │   │       │   ├── char_traits.h
+│   │   │       │   ├── codecvt.h
+│   │   │       │   ├── concept_check.h
+│   │   │       │   ├── cpp_type_traits.h
+│   │   │       │   ├── cxxabi_forced.h
+│   │   │       │   ├── cxxabi_init_exception.h
+│   │   │       │   ├── deque.tcc
+│   │   │       │   ├── enable_special_members.h
+│   │   │       │   ├── erase_if.h
+│   │   │       │   ├── exception_defines.h
+│   │   │       │   ├── exception.h
+│   │   │       │   ├── exception_ptr.h
+│   │   │       │   ├── forward_list.h
+│   │   │       │   ├── forward_list.tcc
+│   │   │       │   ├── fs_dir.h
+│   │   │       │   ├── fs_fwd.h
+│   │   │       │   ├── fs_ops.h
+│   │   │       │   ├── fs_path.h
+│   │   │       │   ├── fstream.tcc
+│   │   │       │   ├── functexcept.h
+│   │   │       │   ├── functional_hash.h
+│   │   │       │   ├── gslice_array.h
+│   │   │       │   ├── gslice.h
+│   │   │       │   ├── hash_bytes.h
+│   │   │       │   ├── hashtable.h
+│   │   │       │   ├── hashtable_policy.h
+│   │   │       │   ├── indirect_array.h
+│   │   │       │   ├── int_limits.h
+│   │   │       │   ├── invoke.h
+│   │   │       │   ├── ios_base.h
+│   │   │       │   ├── istream.tcc
+│   │   │       │   ├── iterator_concepts.h
+│   │   │       │   ├── list.tcc
+│   │   │       │   ├── locale_classes.h
+│   │   │       │   ├── locale_classes.tcc
+│   │   │       │   ├── locale_conv.h
+│   │   │       │   ├── locale_facets.h
+│   │   │       │   ├── locale_facets_nonio.h
+│   │   │       │   ├── locale_facets_nonio.tcc
+│   │   │       │   ├── locale_facets.tcc
+│   │   │       │   ├── localefwd.h
+│   │   │       │   ├── mask_array.h
+│   │   │       │   ├── memoryfwd.h
+│   │   │       │   ├── move.h
+│   │   │       │   ├── nested_exception.h
+│   │   │       │   ├── node_handle.h
+│   │   │       │   ├── ostream_insert.h
+│   │   │       │   ├── ostream.tcc
+│   │   │       │   ├── parse_numbers.h
+│   │   │       │   ├── postypes.h
+│   │   │       │   ├── predefined_ops.h
+│   │   │       │   ├── ptr_traits.h
+│   │   │       │   ├── quoted_string.h
+│   │   │       │   ├── random.h
+│   │   │       │   ├── random.tcc
+│   │   │       │   ├── range_access.h
+│   │   │       │   ├── range_cmp.h
+│   │   │       │   ├── ranges_algobase.h
+│   │   │       │   ├── ranges_algo.h
+│   │   │       │   ├── ranges_uninitialized.h
+│   │   │       │   ├── refwrap.h
+│   │   │       │   ├── regex_automaton.h
+│   │   │       │   ├── regex_automaton.tcc
+│   │   │       │   ├── regex_compiler.h
+│   │   │       │   ├── regex_compiler.tcc
+│   │   │       │   ├── regex_constants.h
+│   │   │       │   ├── regex_error.h
+│   │   │       │   ├── regex_executor.h
+│   │   │       │   ├── regex_executor.tcc
+│   │   │       │   ├── regex.h
+│   │   │       │   ├── regex_scanner.h
+│   │   │       │   ├── regex_scanner.tcc
+│   │   │       │   ├── regex.tcc
+│   │   │       │   ├── shared_ptr_atomic.h
+│   │   │       │   ├── shared_ptr_base.h
+│   │   │       │   ├── shared_ptr.h
+│   │   │       │   ├── slice_array.h
+│   │   │       │   ├── specfun.h
+│   │   │       │   ├── sstream.tcc
+│   │   │       │   ├── std_abs.h
+│   │   │       │   ├── std_function.h
+│   │   │       │   ├── std_mutex.h
+│   │   │       │   ├── stl_algobase.h
+│   │   │       │   ├── stl_algo.h
+│   │   │       │   ├── stl_bvector.h
+│   │   │       │   ├── stl_construct.h
+│   │   │       │   ├── stl_deque.h
+│   │   │       │   ├── stl_function.h
+│   │   │       │   ├── stl_heap.h
+│   │   │       │   ├── stl_iterator_base_funcs.h
+│   │   │       │   ├── stl_iterator_base_types.h
+│   │   │       │   ├── stl_iterator.h
+│   │   │       │   ├── stl_list.h
+│   │   │       │   ├── stl_map.h
+│   │   │       │   ├── stl_multimap.h
+│   │   │       │   ├── stl_multiset.h
+│   │   │       │   ├── stl_numeric.h
+│   │   │       │   ├── stl_pair.h
+│   │   │       │   ├── stl_queue.h
+│   │   │       │   ├── stl_raw_storage_iter.h
+│   │   │       │   ├── stl_relops.h
+│   │   │       │   ├── stl_set.h
+│   │   │       │   ├── stl_stack.h
+│   │   │       │   ├── stl_tempbuf.h
+│   │   │       │   ├── stl_tree.h
+│   │   │       │   ├── stl_uninitialized.h
+│   │   │       │   ├── stl_vector.h
+│   │   │       │   ├── streambuf_iterator.h
+│   │   │       │   ├── streambuf.tcc
+│   │   │       │   ├── stream_iterator.h
+│   │   │       │   ├── stringfwd.h
+│   │   │       │   ├── string_view.tcc
+│   │   │       │   ├── uniform_int_dist.h
+│   │   │       │   ├── unique_lock.h
+│   │   │       │   ├── unique_ptr.h
+│   │   │       │   ├── unordered_map.h
+│   │   │       │   ├── unordered_set.h
+│   │   │       │   ├── uses_allocator.h
+│   │   │       │   ├── valarray_after.h
+│   │   │       │   ├── valarray_array.h
+│   │   │       │   ├── valarray_array.tcc
+│   │   │       │   ├── valarray_before.h
+│   │   │       │   └── vector.tcc
+│   │   │       ├── bitset
+│   │   │       ├── cassert
+│   │   │       ├── ccomplex
+│   │   │       ├── cctype
+│   │   │       ├── cerrno
+│   │   │       ├── cfenv
+│   │   │       ├── cfloat
+│   │   │       ├── charconv
+│   │   │       ├── chrono
+│   │   │       ├── cinttypes
+│   │   │       ├── ciso646
+│   │   │       ├── climits
+│   │   │       ├── clocale
+│   │   │       ├── cmath
+│   │   │       ├── codecvt
+│   │   │       ├── compare
+│   │   │       ├── complex
+│   │   │       ├── complex.h
+│   │   │       ├── concepts
+│   │   │       ├── condition_variable
+│   │   │       ├── coroutine
+│   │   │       ├── csetjmp
+│   │   │       ├── csignal
+│   │   │       ├── cstdalign
+│   │   │       ├── cstdarg
+│   │   │       ├── cstdbool
+│   │   │       ├── cstddef
+│   │   │       ├── cstdint
+│   │   │       ├── cstdio
+│   │   │       ├── cstdlib
+│   │   │       ├── cstring
+│   │   │       ├── ctgmath
+│   │   │       ├── ctime
+│   │   │       ├── cuchar
+│   │   │       ├── cwchar
+│   │   │       ├── cwctype
+│   │   │       ├── cxxabi.h
+│   │   │       ├── debug
+│   │   │       │   ├── array
+│   │   │       │   ├── assertions.h
+│   │   │       │   ├── bitset
+│   │   │       │   ├── debug.h
+│   │   │       │   ├── deque
+│   │   │       │   ├── formatter.h
+│   │   │       │   ├── forward_list
+│   │   │       │   ├── functions.h
+│   │   │       │   ├── helper_functions.h
+│   │   │       │   ├── list
+│   │   │       │   ├── macros.h
+│   │   │       │   ├── map
+│   │   │       │   ├── map.h
+│   │   │       │   ├── multimap.h
+│   │   │       │   ├── multiset.h
+│   │   │       │   ├── safe_base.h
+│   │   │       │   ├── safe_container.h
+│   │   │       │   ├── safe_iterator.h
+│   │   │       │   ├── safe_iterator.tcc
+│   │   │       │   ├── safe_local_iterator.h
+│   │   │       │   ├── safe_local_iterator.tcc
+│   │   │       │   ├── safe_sequence.h
+│   │   │       │   ├── safe_sequence.tcc
+│   │   │       │   ├── safe_unordered_base.h
+│   │   │       │   ├── safe_unordered_container.h
+│   │   │       │   ├── safe_unordered_container.tcc
+│   │   │       │   ├── set
+│   │   │       │   ├── set.h
+│   │   │       │   ├── stl_iterator.h
+│   │   │       │   ├── string
+│   │   │       │   ├── unordered_map
+│   │   │       │   ├── unordered_set
+│   │   │       │   └── vector
+│   │   │       ├── decimal
+│   │   │       │   ├── decimal
+│   │   │       │   └── decimal.h
+│   │   │       ├── deque
+│   │   │       ├── exception
+│   │   │       ├── execution
+│   │   │       ├── experimental
+│   │   │       │   ├── algorithm
+│   │   │       │   ├── any
+│   │   │       │   ├── array
+│   │   │       │   ├── bits
+│   │   │       │   │   ├── lfts_config.h
+│   │   │       │   │   ├── net.h
+│   │   │       │   │   ├── shared_ptr.h
+│   │   │       │   │   └── string_view.tcc
+│   │   │       │   ├── buffer
+│   │   │       │   ├── chrono
+│   │   │       │   ├── deque
+│   │   │       │   ├── executor
+│   │   │       │   ├── forward_list
+│   │   │       │   ├── functional
+│   │   │       │   ├── internet
+│   │   │       │   ├── io_context
+│   │   │       │   ├── iterator
+│   │   │       │   ├── list
+│   │   │       │   ├── map
+│   │   │       │   ├── memory
+│   │   │       │   ├── memory_resource
+│   │   │       │   ├── net
+│   │   │       │   ├── netfwd
+│   │   │       │   ├── numeric
+│   │   │       │   ├── optional
+│   │   │       │   ├── propagate_const
+│   │   │       │   ├── random
+│   │   │       │   ├── ratio
+│   │   │       │   ├── regex
+│   │   │       │   ├── set
+│   │   │       │   ├── socket
+│   │   │       │   ├── source_location
+│   │   │       │   ├── string
+│   │   │       │   ├── string_view
+│   │   │       │   ├── system_error
+│   │   │       │   ├── timer
+│   │   │       │   ├── tuple
+│   │   │       │   ├── type_traits
+│   │   │       │   ├── unordered_map
+│   │   │       │   ├── unordered_set
+│   │   │       │   ├── utility
+│   │   │       │   └── vector
+│   │   │       ├── ext
+│   │   │       │   ├── algorithm
+│   │   │       │   ├── aligned_buffer.h
+│   │   │       │   ├── alloc_traits.h
+│   │   │       │   ├── atomicity.h
+│   │   │       │   ├── bitmap_allocator.h
+│   │   │       │   ├── cast.h
+│   │   │       │   ├── cmath
+│   │   │       │   ├── codecvt_specializations.h
+│   │   │       │   ├── concurrence.h
+│   │   │       │   ├── debug_allocator.h
+│   │   │       │   ├── enc_filebuf.h
+│   │   │       │   ├── extptr_allocator.h
+│   │   │       │   ├── functional
+│   │   │       │   ├── hash_map
+│   │   │       │   ├── hash_set
+│   │   │       │   ├── iterator
+│   │   │       │   ├── malloc_allocator.h
+│   │   │       │   ├── memory
+│   │   │       │   ├── mt_allocator.h
+│   │   │       │   ├── new_allocator.h
+│   │   │       │   ├── numeric
+│   │   │       │   ├── numeric_traits.h
+│   │   │       │   ├── pb_ds
+│   │   │       │   │   ├── assoc_container.hpp
+│   │   │       │   │   ├── detail
+│   │   │       │   │   │   ├── binary_heap_
+│   │   │       │   │   │   │   ├── binary_heap_.hpp
+│   │   │       │   │   │   │   ├── const_iterator.hpp
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── entry_cmp.hpp
+│   │   │       │   │   │   │   ├── entry_pred.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── point_const_iterator.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_policy.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── binomial_heap_
+│   │   │       │   │   │   │   ├── binomial_heap_.hpp
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   └── debug_fn_imps.hpp
+│   │   │       │   │   │   ├── binomial_heap_base_
+│   │   │       │   │   │   │   ├── binomial_heap_base_.hpp
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   └── split_join_fn_imps.hpp
+│   │   │       │   │   │   ├── bin_search_tree_
+│   │   │       │   │   │   │   ├── bin_search_tree_.hpp
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── node_iterators.hpp
+│   │   │       │   │   │   │   ├── point_iterators.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── r_erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── rotate_fn_imps.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── traits.hpp
+│   │   │       │   │   │   ├── branch_policy
+│   │   │       │   │   │   │   ├── branch_policy.hpp
+│   │   │       │   │   │   │   ├── null_node_metadata.hpp
+│   │   │       │   │   │   │   └── traits.hpp
+│   │   │       │   │   │   ├── cc_hash_table_map_
+│   │   │       │   │   │   │   ├── cc_ht_map_.hpp
+│   │   │       │   │   │   │   ├── cmp_fn_imps.hpp
+│   │   │       │   │   │   │   ├── cond_key_dtor_entry_dealtor.hpp
+│   │   │       │   │   │   │   ├── constructor_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── constructor_destructor_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── constructor_destructor_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── entry_list_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── size_fn_imps.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── cond_dealtor.hpp
+│   │   │       │   │   │   ├── container_base_dispatch.hpp
+│   │   │       │   │   │   ├── debug_map_base.hpp
+│   │   │       │   │   │   ├── eq_fn
+│   │   │       │   │   │   │   ├── eq_by_less.hpp
+│   │   │       │   │   │   │   └── hash_eq_fn.hpp
+│   │   │       │   │   │   ├── gp_hash_table_map_
+│   │   │       │   │   │   │   ├── constructor_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── constructor_destructor_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── constructor_destructor_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── gp_ht_map_.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterator_fn_imps.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_no_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   ├── resize_store_hash_fn_imps.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── hash_fn
+│   │   │       │   │   │   │   ├── direct_mask_range_hashing_imp.hpp
+│   │   │       │   │   │   │   ├── direct_mod_range_hashing_imp.hpp
+│   │   │       │   │   │   │   ├── linear_probe_fn_imp.hpp
+│   │   │       │   │   │   │   ├── mask_based_range_hashing.hpp
+│   │   │       │   │   │   │   ├── mod_based_range_hashing.hpp
+│   │   │       │   │   │   │   ├── probe_fn_base.hpp
+│   │   │       │   │   │   │   ├── quadratic_probe_fn_imp.hpp
+│   │   │       │   │   │   │   ├── ranged_hash_fn.hpp
+│   │   │       │   │   │   │   ├── ranged_probe_fn.hpp
+│   │   │       │   │   │   │   ├── sample_probe_fn.hpp
+│   │   │       │   │   │   │   ├── sample_ranged_hash_fn.hpp
+│   │   │       │   │   │   │   ├── sample_ranged_probe_fn.hpp
+│   │   │       │   │   │   │   └── sample_range_hashing.hpp
+│   │   │       │   │   │   ├── left_child_next_sibling_heap_
+│   │   │       │   │   │   │   ├── const_iterator.hpp
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── left_child_next_sibling_heap_.hpp
+│   │   │       │   │   │   │   ├── node.hpp
+│   │   │       │   │   │   │   ├── point_const_iterator.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── list_update_map_
+│   │   │       │   │   │   │   ├── constructor_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── entry_metadata_base.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── lu_map_.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── list_update_policy
+│   │   │       │   │   │   │   ├── lu_counter_metadata.hpp
+│   │   │       │   │   │   │   └── sample_update_policy.hpp
+│   │   │       │   │   │   ├── ov_tree_map_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── node_iterators.hpp
+│   │   │       │   │   │   │   ├── ov_tree_map_.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── traits.hpp
+│   │   │       │   │   │   ├── pairing_heap_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── pairing_heap_.hpp
+│   │   │       │   │   │   │   └── split_join_fn_imps.hpp
+│   │   │       │   │   │   ├── pat_trie_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_join_fn_imps.hpp
+│   │   │       │   │   │   │   ├── iterators_fn_imps.hpp
+│   │   │       │   │   │   │   ├── pat_trie_base.hpp
+│   │   │       │   │   │   │   ├── pat_trie_.hpp
+│   │   │       │   │   │   │   ├── policy_access_fn_imps.hpp
+│   │   │       │   │   │   │   ├── r_erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── rotate_fn_imps.hpp
+│   │   │       │   │   │   │   ├── split_fn_imps.hpp
+│   │   │       │   │   │   │   ├── synth_access_traits.hpp
+│   │   │       │   │   │   │   ├── trace_fn_imps.hpp
+│   │   │       │   │   │   │   ├── traits.hpp
+│   │   │       │   │   │   │   └── update_fn_imps.hpp
+│   │   │       │   │   │   ├── priority_queue_base_dispatch.hpp
+│   │   │       │   │   │   ├── rb_tree_map_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── node.hpp
+│   │   │       │   │   │   │   ├── rb_tree_.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── traits.hpp
+│   │   │       │   │   │   ├── rc_binomial_heap_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── rc_binomial_heap_.hpp
+│   │   │       │   │   │   │   ├── rc.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── resize_policy
+│   │   │       │   │   │   │   ├── cc_hash_max_collision_check_resize_trigger_imp.hpp
+│   │   │       │   │   │   │   ├── hash_exponential_size_policy_imp.hpp
+│   │   │       │   │   │   │   ├── hash_load_check_resize_trigger_imp.hpp
+│   │   │       │   │   │   │   ├── hash_load_check_resize_trigger_size_base.hpp
+│   │   │       │   │   │   │   ├── hash_prime_size_policy_imp.hpp
+│   │   │       │   │   │   │   ├── hash_standard_resize_policy_imp.hpp
+│   │   │       │   │   │   │   ├── sample_resize_policy.hpp
+│   │   │       │   │   │   │   ├── sample_resize_trigger.hpp
+│   │   │       │   │   │   │   └── sample_size_policy.hpp
+│   │   │       │   │   │   ├── splay_tree_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── info_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── node.hpp
+│   │   │       │   │   │   │   ├── splay_fn_imps.hpp
+│   │   │       │   │   │   │   ├── splay_tree_.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   └── traits.hpp
+│   │   │       │   │   │   ├── standard_policies.hpp
+│   │   │       │   │   │   ├── thin_heap_
+│   │   │       │   │   │   │   ├── constructors_destructor_fn_imps.hpp
+│   │   │       │   │   │   │   ├── debug_fn_imps.hpp
+│   │   │       │   │   │   │   ├── erase_fn_imps.hpp
+│   │   │       │   │   │   │   ├── find_fn_imps.hpp
+│   │   │       │   │   │   │   ├── insert_fn_imps.hpp
+│   │   │       │   │   │   │   ├── split_join_fn_imps.hpp
+│   │   │       │   │   │   │   ├── thin_heap_.hpp
+│   │   │       │   │   │   │   └── trace_fn_imps.hpp
+│   │   │       │   │   │   ├── tree_policy
+│   │   │       │   │   │   │   ├── node_metadata_selector.hpp
+│   │   │       │   │   │   │   ├── order_statistics_imp.hpp
+│   │   │       │   │   │   │   └── sample_tree_node_update.hpp
+│   │   │       │   │   │   ├── tree_trace_base.hpp
+│   │   │       │   │   │   ├── trie_policy
+│   │   │       │   │   │   │   ├── node_metadata_selector.hpp
+│   │   │       │   │   │   │   ├── order_statistics_imp.hpp
+│   │   │       │   │   │   │   ├── prefix_search_node_update_imp.hpp
+│   │   │       │   │   │   │   ├── sample_trie_access_traits.hpp
+│   │   │       │   │   │   │   ├── sample_trie_node_update.hpp
+│   │   │       │   │   │   │   ├── trie_policy_base.hpp
+│   │   │       │   │   │   │   └── trie_string_access_traits_imp.hpp
+│   │   │       │   │   │   ├── types_traits.hpp
+│   │   │       │   │   │   ├── type_utils.hpp
+│   │   │       │   │   │   └── unordered_iterator
+│   │   │       │   │   │       ├── const_iterator.hpp
+│   │   │       │   │   │       ├── iterator.hpp
+│   │   │       │   │   │       ├── point_const_iterator.hpp
+│   │   │       │   │   │       └── point_iterator.hpp
+│   │   │       │   │   ├── exception.hpp
+│   │   │       │   │   ├── hash_policy.hpp
+│   │   │       │   │   ├── list_update_policy.hpp
+│   │   │       │   │   ├── priority_queue.hpp
+│   │   │       │   │   ├── tag_and_trait.hpp
+│   │   │       │   │   ├── tree_policy.hpp
+│   │   │       │   │   └── trie_policy.hpp
+│   │   │       │   ├── pod_char_traits.h
+│   │   │       │   ├── pointer.h
+│   │   │       │   ├── pool_allocator.h
+│   │   │       │   ├── random
+│   │   │       │   ├── random.tcc
+│   │   │       │   ├── rb_tree
+│   │   │       │   ├── rc_string_base.h
+│   │   │       │   ├── rope
+│   │   │       │   ├── ropeimpl.h
+│   │   │       │   ├── slist
+│   │   │       │   ├── sso_string_base.h
+│   │   │       │   ├── stdio_filebuf.h
+│   │   │       │   ├── stdio_sync_filebuf.h
+│   │   │       │   ├── string_conversions.h
+│   │   │       │   ├── throw_allocator.h
+│   │   │       │   ├── typelist.h
+│   │   │       │   ├── type_traits.h
+│   │   │       │   ├── vstring_fwd.h
+│   │   │       │   ├── vstring.h
+│   │   │       │   ├── vstring.tcc
+│   │   │       │   └── vstring_util.h
+│   │   │       ├── fenv.h
+│   │   │       ├── filesystem
+│   │   │       ├── forward_list
+│   │   │       ├── fstream
+│   │   │       ├── functional
+│   │   │       ├── future
+│   │   │       ├── initializer_list
+│   │   │       ├── iomanip
+│   │   │       ├── ios
+│   │   │       ├── iosfwd
+│   │   │       ├── iostream
+│   │   │       ├── istream
+│   │   │       ├── iterator
+│   │   │       ├── limits
+│   │   │       ├── list
+│   │   │       ├── locale
+│   │   │       ├── map
+│   │   │       ├── math.h
+│   │   │       ├── memory
+│   │   │       ├── memory_resource
+│   │   │       ├── mutex
+│   │   │       ├── new
+│   │   │       ├── numbers
+│   │   │       ├── numeric
+│   │   │       ├── optional
+│   │   │       ├── ostream
+│   │   │       ├── parallel
+│   │   │       │   ├── algobase.h
+│   │   │       │   ├── algo.h
+│   │   │       │   ├── algorithm
+│   │   │       │   ├── algorithmfwd.h
+│   │   │       │   ├── balanced_quicksort.h
+│   │   │       │   ├── base.h
+│   │   │       │   ├── basic_iterator.h
+│   │   │       │   ├── checkers.h
+│   │   │       │   ├── compatibility.h
+│   │   │       │   ├── compiletime_settings.h
+│   │   │       │   ├── equally_split.h
+│   │   │       │   ├── features.h
+│   │   │       │   ├── find.h
+│   │   │       │   ├── find_selectors.h
+│   │   │       │   ├── for_each.h
+│   │   │       │   ├── for_each_selectors.h
+│   │   │       │   ├── iterator.h
+│   │   │       │   ├── list_partition.h
+│   │   │       │   ├── losertree.h
+│   │   │       │   ├── merge.h
+│   │   │       │   ├── multiseq_selection.h
+│   │   │       │   ├── multiway_merge.h
+│   │   │       │   ├── multiway_mergesort.h
+│   │   │       │   ├── numeric
+│   │   │       │   ├── numericfwd.h
+│   │   │       │   ├── omp_loop.h
+│   │   │       │   ├── omp_loop_static.h
+│   │   │       │   ├── parallel.h
+│   │   │       │   ├── par_loop.h
+│   │   │       │   ├── partial_sum.h
+│   │   │       │   ├── partition.h
+│   │   │       │   ├── queue.h
+│   │   │       │   ├── quicksort.h
+│   │   │       │   ├── random_number.h
+│   │   │       │   ├── random_shuffle.h
+│   │   │       │   ├── search.h
+│   │   │       │   ├── set_operations.h
+│   │   │       │   ├── settings.h
+│   │   │       │   ├── sort.h
+│   │   │       │   ├── tags.h
+│   │   │       │   ├── types.h
+│   │   │       │   ├── unique_copy.h
+│   │   │       │   └── workstealing.h
+│   │   │       ├── pstl
+│   │   │       │   ├── algorithm_fwd.h
+│   │   │       │   ├── algorithm_impl.h
+│   │   │       │   ├── execution_defs.h
+│   │   │       │   ├── execution_impl.h
+│   │   │       │   ├── glue_algorithm_defs.h
+│   │   │       │   ├── glue_algorithm_impl.h
+│   │   │       │   ├── glue_execution_defs.h
+│   │   │       │   ├── glue_memory_defs.h
+│   │   │       │   ├── glue_memory_impl.h
+│   │   │       │   ├── glue_numeric_defs.h
+│   │   │       │   ├── glue_numeric_impl.h
+│   │   │       │   ├── memory_impl.h
+│   │   │       │   ├── numeric_fwd.h
+│   │   │       │   ├── numeric_impl.h
+│   │   │       │   ├── parallel_backend.h
+│   │   │       │   ├── parallel_backend_serial.h
+│   │   │       │   ├── parallel_backend_tbb.h
+│   │   │       │   ├── parallel_backend_utils.h
+│   │   │       │   ├── parallel_impl.h
+│   │   │       │   ├── pstl_config.h
+│   │   │       │   ├── unseq_backend_simd.h
+│   │   │       │   └── utils.h
+│   │   │       ├── queue
+│   │   │       ├── random
+│   │   │       ├── ranges
+│   │   │       ├── ratio
+│   │   │       ├── regex
+│   │   │       ├── riscv64-unknown-elf
+│   │   │       │   ├── bits
+│   │   │       │   │   ├── atomic_word.h
+│   │   │       │   │   ├── basic_file.h
+│   │   │       │   │   ├── c++allocator.h
+│   │   │       │   │   ├── c++config.h
+│   │   │       │   │   ├── c++io.h
+│   │   │       │   │   ├── c++locale.h
+│   │   │       │   │   ├── cpu_defines.h
+│   │   │       │   │   ├── ctype_base.h
+│   │   │       │   │   ├── ctype_inline.h
+│   │   │       │   │   ├── cxxabi_tweaks.h
+│   │   │       │   │   ├── error_constants.h
+│   │   │       │   │   ├── extc++.h
+│   │   │       │   │   ├── gthr-default.h
+│   │   │       │   │   ├── gthr.h
+│   │   │       │   │   ├── gthr-posix.h
+│   │   │       │   │   ├── gthr-single.h
+│   │   │       │   │   ├── messages_members.h
+│   │   │       │   │   ├── opt_random.h
+│   │   │       │   │   ├── os_defines.h
+│   │   │       │   │   ├── stdc++.h
+│   │   │       │   │   ├── stdtr1c++.h
+│   │   │       │   │   └── time_members.h
+│   │   │       │   └── ext
+│   │   │       │       └── opt_random.h
+│   │   │       ├── scoped_allocator
+│   │   │       ├── set
+│   │   │       ├── shared_mutex
+│   │   │       ├── span
+│   │   │       ├── sstream
+│   │   │       ├── stack
+│   │   │       ├── stdexcept
+│   │   │       ├── stdlib.h
+│   │   │       ├── stop_token
+│   │   │       ├── streambuf
+│   │   │       ├── string
+│   │   │       ├── string_view
+│   │   │       ├── system_error
+│   │   │       ├── tgmath.h
+│   │   │       ├── thread
+│   │   │       ├── tr1
+│   │   │       │   ├── array
+│   │   │       │   ├── bessel_function.tcc
+│   │   │       │   ├── beta_function.tcc
+│   │   │       │   ├── ccomplex
+│   │   │       │   ├── cctype
+│   │   │       │   ├── cfenv
+│   │   │       │   ├── cfloat
+│   │   │       │   ├── cinttypes
+│   │   │       │   ├── climits
+│   │   │       │   ├── cmath
+│   │   │       │   ├── complex
+│   │   │       │   ├── complex.h
+│   │   │       │   ├── cstdarg
+│   │   │       │   ├── cstdbool
+│   │   │       │   ├── cstdint
+│   │   │       │   ├── cstdio
+│   │   │       │   ├── cstdlib
+│   │   │       │   ├── ctgmath
+│   │   │       │   ├── ctime
+│   │   │       │   ├── ctype.h
+│   │   │       │   ├── cwchar
+│   │   │       │   ├── cwctype
+│   │   │       │   ├── ell_integral.tcc
+│   │   │       │   ├── exp_integral.tcc
+│   │   │       │   ├── fenv.h
+│   │   │       │   ├── float.h
+│   │   │       │   ├── functional
+│   │   │       │   ├── functional_hash.h
+│   │   │       │   ├── gamma.tcc
+│   │   │       │   ├── hashtable.h
+│   │   │       │   ├── hashtable_policy.h
+│   │   │       │   ├── hypergeometric.tcc
+│   │   │       │   ├── inttypes.h
+│   │   │       │   ├── legendre_function.tcc
+│   │   │       │   ├── limits.h
+│   │   │       │   ├── math.h
+│   │   │       │   ├── memory
+│   │   │       │   ├── modified_bessel_func.tcc
+│   │   │       │   ├── poly_hermite.tcc
+│   │   │       │   ├── poly_laguerre.tcc
+│   │   │       │   ├── random
+│   │   │       │   ├── random.h
+│   │   │       │   ├── random.tcc
+│   │   │       │   ├── regex
+│   │   │       │   ├── riemann_zeta.tcc
+│   │   │       │   ├── shared_ptr.h
+│   │   │       │   ├── special_function_util.h
+│   │   │       │   ├── stdarg.h
+│   │   │       │   ├── stdbool.h
+│   │   │       │   ├── stdint.h
+│   │   │       │   ├── stdio.h
+│   │   │       │   ├── stdlib.h
+│   │   │       │   ├── tgmath.h
+│   │   │       │   ├── tuple
+│   │   │       │   ├── type_traits
+│   │   │       │   ├── unordered_map
+│   │   │       │   ├── unordered_map.h
+│   │   │       │   ├── unordered_set
+│   │   │       │   ├── unordered_set.h
+│   │   │       │   ├── utility
+│   │   │       │   ├── wchar.h
+│   │   │       │   └── wctype.h
+│   │   │       ├── tr2
+│   │   │       │   ├── bool_set
+│   │   │       │   ├── bool_set.tcc
+│   │   │       │   ├── dynamic_bitset
+│   │   │       │   ├── dynamic_bitset.tcc
+│   │   │       │   ├── ratio
+│   │   │       │   └── type_traits
+│   │   │       ├── tuple
+│   │   │       ├── typeindex
+│   │   │       ├── typeinfo
+│   │   │       ├── type_traits
+│   │   │       ├── unordered_map
+│   │   │       ├── unordered_set
+│   │   │       ├── utility
+│   │   │       ├── valarray
+│   │   │       ├── variant
+│   │   │       ├── vector
+│   │   │       └── version
+│   │   ├── complex.h
+│   │   ├── cpio.h
+│   │   ├── ctype.h
+│   │   ├── devctl.h
+│   │   ├── dirent.h
+│   │   ├── elf.h
+│   │   ├── envlock.h
+│   │   ├── envz.h
+│   │   ├── errno.h
+│   │   ├── fastmath.h
+│   │   ├── fcntl.h
+│   │   ├── fenv.h
+│   │   ├── fnmatch.h
+│   │   ├── getopt.h
+│   │   ├── glob.h
+│   │   ├── grp.h
+│   │   ├── iconv.h
+│   │   ├── ieeefp.h
+│   │   ├── inttypes.h
+│   │   ├── langinfo.h
+│   │   ├── libgen.h
+│   │   ├── limits.h
+│   │   ├── locale.h
+│   │   ├── machine
+│   │   │   ├── ansi.h
+│   │   │   ├── _arc4random.h
+│   │   │   ├── _default_types.h
+│   │   │   ├── _endian.h
+│   │   │   ├── endian.h
+│   │   │   ├── fastmath.h
+│   │   │   ├── ieeefp.h
+│   │   │   ├── malloc.h
+│   │   │   ├── param.h
+│   │   │   ├── setjmp-dj.h
+│   │   │   ├── setjmp.h
+│   │   │   ├── stdlib.h
+│   │   │   ├── syscall.h
+│   │   │   ├── termios.h
+│   │   │   ├── _time.h
+│   │   │   ├── time.h
+│   │   │   ├── _types.h
+│   │   │   └── types.h
+│   │   ├── malloc.h
+│   │   ├── math.h
+│   │   ├── memory.h
+│   │   ├── ndbm.h
+│   │   ├── newlib.h
+│   │   ├── newlib-nano
+│   │   │   └── newlib.h
+│   │   ├── _newlib_version.h
+│   │   ├── paths.h
+│   │   ├── pthread.h
+│   │   ├── pwd.h
+│   │   ├── reent.h
+│   │   ├── regdef.h
+│   │   ├── regex.h
+│   │   ├── rpc
+│   │   ├── sched.h
+│   │   ├── search.h
+│   │   ├── setjmp.h
+│   │   ├── signal.h
+│   │   ├── spawn.h
+│   │   ├── ssp
+│   │   │   ├── ssp.h
+│   │   │   ├── stdio.h
+│   │   │   ├── stdlib.h
+│   │   │   ├── string.h
+│   │   │   ├── strings.h
+│   │   │   ├── unistd.h
+│   │   │   └── wchar.h
+│   │   ├── stdatomic.h
+│   │   ├── stdint.h
+│   │   ├── stdio_ext.h
+│   │   ├── stdio.h
+│   │   ├── stdlib.h
+│   │   ├── string.h
+│   │   ├── strings.h
+│   │   ├── sys
+│   │   │   ├── asm.h
+│   │   │   ├── cdefs.h
+│   │   │   ├── config.h
+│   │   │   ├── custom_file.h
+│   │   │   ├── _default_fcntl.h
+│   │   │   ├── dirent.h
+│   │   │   ├── dir.h
+│   │   │   ├── errno.h
+│   │   │   ├── fcntl.h
+│   │   │   ├── features.h
+│   │   │   ├── fenv.h
+│   │   │   ├── file.h
+│   │   │   ├── iconvnls.h
+│   │   │   ├── _intsup.h
+│   │   │   ├── _locale.h
+│   │   │   ├── lock.h
+│   │   │   ├── param.h
+│   │   │   ├── _pthreadtypes.h
+│   │   │   ├── queue.h
+│   │   │   ├── reent.h
+│   │   │   ├── resource.h
+│   │   │   ├── sched.h
+│   │   │   ├── select.h
+│   │   │   ├── signal.h
+│   │   │   ├── _sigset.h
+│   │   │   ├── stat.h
+│   │   │   ├── _stdint.h
+│   │   │   ├── stdio.h
+│   │   │   ├── string.h
+│   │   │   ├── syslimits.h
+│   │   │   ├── timeb.h
+│   │   │   ├── time.h
+│   │   │   ├── times.h
+│   │   │   ├── _timespec.h
+│   │   │   ├── timespec.h
+│   │   │   ├── _timeval.h
+│   │   │   ├── tree.h
+│   │   │   ├── _types.h
+│   │   │   ├── types.h
+│   │   │   ├── unistd.h
+│   │   │   ├── utime.h
+│   │   │   └── wait.h
+│   │   ├── _syslist.h
+│   │   ├── tar.h
+│   │   ├── termios.h
+│   │   ├── tgmath.h
+│   │   ├── threads.h
+│   │   ├── time.h
+│   │   ├── unctrl.h
+│   │   ├── unistd.h
+│   │   ├── utime.h
+│   │   ├── utmp.h
+│   │   ├── wchar.h
+│   │   ├── wctype.h
+│   │   └── wordexp.h
+│   └── lib
+│       ├── crt0.o
+│       ├── ldscripts
+│       │   ├── elf32lriscv.x
+│       │   ├── elf32lriscv.xbn
+│       │   ├── elf32lriscv.xc
+│       │   ├── elf32lriscv.xce
+│       │   ├── elf32lriscv.xe
+│       │   ├── elf32lriscv.xn
+│       │   ├── elf32lriscv.xr
+│       │   ├── elf32lriscv.xu
+│       │   ├── elf32lriscv.xw
+│       │   ├── elf32lriscv.xwe
+│       │   ├── elf64lriscv.x
+│       │   ├── elf64lriscv.xbn
+│       │   ├── elf64lriscv.xc
+│       │   ├── elf64lriscv.xce
+│       │   ├── elf64lriscv.xe
+│       │   ├── elf64lriscv.xn
+│       │   ├── elf64lriscv.xr
+│       │   ├── elf64lriscv.xu
+│       │   ├── elf64lriscv.xw
+│       │   └── elf64lriscv.xwe
+│       ├── libc.a
+│       ├── libc_nano.a
+│       ├── libg.a
+│       ├── libgloss.a
+│       ├── libgloss_nano.a
+│       ├── libg_nano.a
+│       ├── libm.a
+│       ├── libm_nano.a
+│       ├── libnosys.a
+│       ├── libsim.a
+│       ├── libstdc++.a
+│       ├── libstdc++.a-gdb.py
+│       ├── libstdc++.la
+│       ├── libsupc++.a
+│       ├── libsupc++.la
+│       ├── nano.specs
+│       ├── nosys.specs
+│       └── sim.specs
+└── share
+    ├── gcc-10.1.0
+    │   └── python
+    │       └── libstdcxx
+    │           ├── __init__.py
+    │           └── v6
+    │               ├── __init__.py
+    │               ├── printers.py
+    │               └── xmethods.py
+    ├── gdb
+    │   ├── python
+    │   │   └── gdb
+    │   │       ├── command
+    │   │       │   ├── explore.py
+    │   │       │   ├── frame_filters.py
+    │   │       │   ├── __init__.py
+    │   │       │   ├── pretty_printers.py
+    │   │       │   ├── prompt.py
+    │   │       │   ├── type_printers.py
+    │   │       │   ├── unwinders.py
+    │   │       │   └── xmethods.py
+    │   │       ├── FrameDecorator.py
+    │   │       ├── FrameIterator.py
+    │   │       ├── frames.py
+    │   │       ├── function
+    │   │       │   ├── as_string.py
+    │   │       │   ├── caller_is.py
+    │   │       │   ├── __init__.py
+    │   │       │   └── strfns.py
+    │   │       ├── __init__.py
+    │   │       ├── printer
+    │   │       │   ├── bound_registers.py
+    │   │       │   └── __init__.py
+    │   │       ├── printing.py
+    │   │       ├── prompt.py
+    │   │       ├── types.py
+    │   │       ├── unwinder.py
+    │   │       └── xmethod.py
+    │   ├── syscalls
+    │   │   ├── aarch64-linux.xml
+    │   │   ├── amd64-linux.xml
+    │   │   ├── arm-linux.xml
+    │   │   ├── freebsd.xml
+    │   │   ├── gdb-syscalls.dtd
+    │   │   ├── i386-linux.xml
+    │   │   ├── mips-n32-linux.xml
+    │   │   ├── mips-n64-linux.xml
+    │   │   ├── mips-o32-linux.xml
+    │   │   ├── netbsd.xml
+    │   │   ├── ppc64-linux.xml
+    │   │   ├── ppc-linux.xml
+    │   │   ├── s390-linux.xml
+    │   │   ├── s390x-linux.xml
+    │   │   ├── sparc64-linux.xml
+    │   │   └── sparc-linux.xml
+    │   └── system-gdbinit
+    │       ├── elinos.py
+    │       └── wrs-linux.py
+    ├── info
+    │   ├── annotate.info
+    │   ├── as.info
+    │   ├── bfd.info
+    │   ├── binutils.info
+    │   ├── cpp.info
+    │   ├── cppinternals.info
+    │   ├── gcc.info
+    │   ├── gccinstall.info
+    │   ├── gccint.info
+    │   ├── gdb.info
+    │   ├── gprof.info
+    │   ├── ld.info
+    │   └── stabs.info
+    ├── locale
+    │   ├── bg
+    │   │   └── LC_MESSAGES
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       └── ld.mo
+    │   ├── ca
+    │   │   └── LC_MESSAGES
+    │   │       └── binutils.mo
+    │   ├── da
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── de
+    │   │   └── LC_MESSAGES
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── eo
+    │   │   └── LC_MESSAGES
+    │   │       └── gprof.mo
+    │   ├── es
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── fi
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── fr
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── ga
+    │   │   └── LC_MESSAGES
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── hr
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       └── binutils.mo
+    │   ├── hu
+    │   │   └── LC_MESSAGES
+    │   │       └── gprof.mo
+    │   ├── id
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── it
+    │   │   └── LC_MESSAGES
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── ja
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       └── ld.mo
+    │   ├── ms
+    │   │   └── LC_MESSAGES
+    │   │       └── gprof.mo
+    │   ├── nl
+    │   │   └── LC_MESSAGES
+    │   │       ├── gprof.mo
+    │   │       └── opcodes.mo
+    │   ├── pt
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       └── binutils.mo
+    │   ├── pt_BR
+    │   │   └── LC_MESSAGES
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── ro
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       └── opcodes.mo
+    │   ├── ru
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       └── ld.mo
+    │   ├── rw
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       └── gprof.mo
+    │   ├── sk
+    │   │   └── LC_MESSAGES
+    │   │       └── binutils.mo
+    │   ├── sr
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── sv
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── tr
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── uk
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── vi
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gprof.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   ├── zh_CN
+    │   │   └── LC_MESSAGES
+    │   │       ├── bfd.mo
+    │   │       ├── binutils.mo
+    │   │       ├── gas.mo
+    │   │       ├── ld.mo
+    │   │       └── opcodes.mo
+    │   └── zh_TW
+    │       └── LC_MESSAGES
+    │           ├── binutils.mo
+    │           └── ld.mo
+    └── man
+        ├── man1
+        │   ├── riscv64-unknown-elf-addr2line.1
+        │   ├── riscv64-unknown-elf-ar.1
+        │   ├── riscv64-unknown-elf-as.1
+        │   ├── riscv64-unknown-elf-c++filt.1
+        │   ├── riscv64-unknown-elf-cpp.1
+        │   ├── riscv64-unknown-elf-dlltool.1
+        │   ├── riscv64-unknown-elf-elfedit.1
+        │   ├── riscv64-unknown-elf-g++.1
+        │   ├── riscv64-unknown-elf-gcc.1
+        │   ├── riscv64-unknown-elf-gcov.1
+        │   ├── riscv64-unknown-elf-gcov-dump.1
+        │   ├── riscv64-unknown-elf-gcov-tool.1
+        │   ├── riscv64-unknown-elf-gdb.1
+        │   ├── riscv64-unknown-elf-gdb-add-index.1
+        │   ├── riscv64-unknown-elf-gdbserver.1
+        │   ├── riscv64-unknown-elf-gprof.1
+        │   ├── riscv64-unknown-elf-ld.1
+        │   ├── riscv64-unknown-elf-lto-dump.1
+        │   ├── riscv64-unknown-elf-nm.1
+        │   ├── riscv64-unknown-elf-objcopy.1
+        │   ├── riscv64-unknown-elf-objdump.1
+        │   ├── riscv64-unknown-elf-ranlib.1
+        │   ├── riscv64-unknown-elf-readelf.1
+        │   ├── riscv64-unknown-elf-size.1
+        │   ├── riscv64-unknown-elf-strings.1
+        │   ├── riscv64-unknown-elf-strip.1
+        │   ├── riscv64-unknown-elf-windmc.1
+        │   └── riscv64-unknown-elf-windres.1
+        ├── man5
+        │   └── riscv64-unknown-elf-gdbinit.5
+        └── man7
+            ├── fsf-funding.7
+            ├── gfdl.7
+            └── gpl.7
+
+160 directories, 1687 files
