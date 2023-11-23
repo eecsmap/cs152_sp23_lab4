@@ -1,10 +1,14 @@
-To do lab4, all you need is this repo.
-And the `/home/ff/cs152/sp21/lab4-install` folder which provides:
-* riscv toolchain
-* spike
+# use instructional server
+* enable search path to lab4 specific riscv-toolchain and spike: `source ~cs152/sp23/cs152.lab4.bashrc`
+* go to your lab4 root: `cd /scratch/$USER`
+* clone the lab4: `git clone ~cs152/sp23/lab4.git`
+* enter lab4 root: `cd lab4`
+* try: `cd benchmarks && make csaxpy.riscv.out`
+* NOTE: you might need to install dtc for spike to run.
 
-The lab4-install will be put as
-`/Dropbox/shared/courses/ucb/CS152/cs152_sp23_lab4/lab4-install.tgz`
-
-Make sure you put them into a `centos 7` box.
-I have verified with a `CentOS minimal 7` VM.
+# use non-instructional machine
+* create a CentOS 7 box, minimal install works fine.
+* clone this repo as folder `lab4`
+* untar `/Dropbox/shared/courses/ucb/CS152/cs152_sp23_lab4/lab4-install.tgz`, add `lab4-install/bin` into `$PATH`
+* `yum install dtc -y`, this is needed by the spike tool
+* `cd lab4/benchmarks && make csaxpy.riscv.out`
